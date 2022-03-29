@@ -1,13 +1,16 @@
 from tkinter import Frame, Label
 from tkinter.constants import *
-from feedparser import parse
+
+from src.news_backend.GetNewsBulletin import GetNewsBulletIn
 
 
-class DisplayNewsBulletIn(Frame):
+class DisplayNewsBulletIn(Frame, GetNewsBulletIn):
     news_url = 'http://feeds.bbci.co.uk/news/world/rss.xml'
 
     def __init__(self, parent, *args, **kwargs):
         Frame.__init__(self, parent, *args, **kwargs)
+        GetNewsBulletIn.__init__(self)
+
         self.frame = Frame(parent, bg='black')
         self.frame.pack(side=BOTTOM, fill=BOTH, expand=False)
 
@@ -29,16 +32,17 @@ class DisplayNewsBulletIn(Frame):
         self.description_label.config(text=news_description, wraplength=self.winfo_screenwidth()-10, justify=CENTER)
         self.description_label.pack(side=TOP, anchor=CENTER, padx=10, pady=10)
 
-    def getBasicWorldNews(self):
+    def formatNewsBulletins(self):
         if self.headline_ctr == 0 and len(self.world_news) == 0:
-            self.world_news = parse(self.news_url)
+            self.world_news = self.aggregateRelevantNews()
         elif self.headline_ctr > len(self.world_news['entries']) - 1:
             self.headline_ctr = 0
-            self.world_news = parse(self.news_url)
+            self.world_news = self.aggregateRelevantNews()
+
         news_headline = self.world_news.entries[self.headline_ctr].title
         news_description = self.world_news.entries[self.headline_ctr].description
         self.headline_ctr += 1
         print('%d. %s' %(self.headline_ctr, news_headline))
 
         self.displayNewsBulletins(news_headline, news_description)
-        self.headline_label.after(15000, self.getBasicWorldNews)
+        self.headline_label.after(15000, self.formatNewsBulletins)
