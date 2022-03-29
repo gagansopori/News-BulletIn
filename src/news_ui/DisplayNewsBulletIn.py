@@ -5,8 +5,6 @@ from src.news_backend.GetNewsBulletin import GetNewsBulletIn
 
 
 class DisplayNewsBulletIn(Frame, GetNewsBulletIn):
-    news_url = 'http://feeds.bbci.co.uk/news/world/rss.xml'
-
     def __init__(self, parent, *args, **kwargs):
         Frame.__init__(self, parent, *args, **kwargs)
         GetNewsBulletIn.__init__(self)
@@ -42,7 +40,7 @@ class DisplayNewsBulletIn(Frame, GetNewsBulletIn):
         news_headline = self.world_news.entries[self.headline_ctr].title
         news_description = self.world_news.entries[self.headline_ctr].description
         self.headline_ctr += 1
-        print('%d. %s' %(self.headline_ctr, news_headline))
+        # print('%d. %s' %(self.headline_ctr, news_headline))
 
         self.displayNewsBulletins(news_headline, news_description)
         self.headline_label.after(15000, self.formatNewsBulletins)
