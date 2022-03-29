@@ -40,7 +40,8 @@ class DisplayNewsBulletIn(Frame, GetNewsBulletIn):
         news_headline = self.world_news.entries[self.headline_ctr].title
         news_description = self.world_news.entries[self.headline_ctr].description
         self.headline_ctr += 1
-        # print('%d. %s' %(self.headline_ctr, news_headline))
+        print('%d. %s' %(self.headline_ctr, news_headline))
+        # print('%sx%s' %(self.winfo_screenwidth(), self.winfo_screenheight()))
 
         self.displayNewsBulletins(news_headline, news_description)
         self.headline_label.after(15000, self.formatNewsBulletins)
