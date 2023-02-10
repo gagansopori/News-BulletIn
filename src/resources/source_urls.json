@@ -1,0 +1,59 @@
+{
+  "news": {
+    "entertainment": {
+      "avn": "url",
+      "et": "url",
+      "ftv": "url",
+      "hooters": "url",
+      "xbiz": "url"
+    },
+    "finance": {
+      "cnbc": "url",
+      "fox": "url",
+      "msn": "url",
+      "npr": "url",
+      "yahoo": "url"
+    },
+    "politics": {
+      "cbs": "url",
+      "cnn": "url",
+      "fox": "url",
+      "npr": "url",
+      "politico": "url"
+    },
+    "sports": {
+      "cnn": "url",
+      "espn": "url",
+      "fox": "url",
+      "npr": "url",
+      "yahoo": "url"
+    },
+    "technology": {
+      "abc": "url",
+      "cbs": "url",
+      "msn": "url",
+      "npr": "url",
+      "yahoo": "url"
+    },
+    "weather": {
+      "noshit": "url",
+      "noshitmf": "url",
+      "npr": "url",
+      "some-other-shit": "url",
+      "weatherchannel": "url"
+    },
+    "world": {
+      "bbc": "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "cnbc": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+      "cnn": "http://rss.cnn.com/rss/edition_world.rss",
+      "fox": "https://moxie.foxnews.com/google-publisher/world.xml",
+      "npr": "https://feeds.npr.org/1004/rss.xml",
+      "nytimes": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml",
+      "un": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+      "washingtonpost": "https://feeds.washingtonpost.com/rss/world",
+      "ndtv": "https://feeds.feedburner.com/ndtvnews-world-news",
+      "indiatoday": "https://www.indiatoday.in/rss/1206577",
+      "thehindu": "https://www.thehindu.com/news/national/?service=rss"
+    }
+  }
+}

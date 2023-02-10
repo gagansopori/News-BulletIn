@@ -32,10 +32,10 @@ class DisplayNewsBulletIn(Frame, GetNewsBulletIn):
 
     def formatNewsBulletins(self):
         if self.headline_ctr == 0 and len(self.world_news) == 0:
-            self.world_news = self.aggregateRelevantNews()
+            self.world_news = self.fetch_news()
         elif self.headline_ctr > len(self.world_news['entries']) - 1:
             self.headline_ctr = 0
-            self.world_news = self.aggregateRelevantNews()
+            self.world_news = self.fetch_news()
 
         news_headline = self.world_news.entries[self.headline_ctr].title
         news_description = self.world_news.entries[self.headline_ctr].description
