@@ -1,59 +1,70 @@
 {
-  "news": {
-    "entertainment": {
-      "avn": "url",
-      "et": "url",
+  "entertainment": {
+    "adult": {
+      "avn": "https://avn.com/feed/articles/video.rss",
+      "xbiz": "https://www.xbiz.com/rss/news/all.xml"
+    },
+    "culture": {
+      "elle": "https://www.elle.com/rss/culture.xml",
+      "gq": "https://www.gq.com/feed/culture/rss",
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/culture/",
+      "vogue": "https://www.vogue.com/feed/culture/rss"
+    },
+    "fashion": {
+      "elle": "https://www.elle.com/rss/fashion.xml",
+      "et": "https://www.etonline.com/style/fashion/rss",
+      "gq": "https://www.gq.com/feed/style/rss",
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/fashion/",
+      "vogue": "https://www.vogue.com/feed/fashion/rss"
+    },
+    "health-beauty": {
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/beauty/",
+      "vogue": "https://www.vogue.com/feed/beauty/rss"
+    },
+    "lifestyle": {
+      "elle": "https://www.elle.com/rss/life-love.xml",
+      "et": "https://www.etonline.com/style/lifestyle/rss",
+      "vogue": "https://www.vogue.com/feed/living/rss"
+    },
+    "shopping": {
+      "gq": "https://www.gq.com/feed/gq-recommends/rss"
+    },
+    "top-stories": {
+      "elle": "https://www.elle.com/rss/all.xml ",
+      "et": "https://www.etonline.com/news/rss",
       "ftv": "url",
-      "hooters": "url",
-      "xbiz": "url"
+      "gq": "https://www.gq.com/feed/rss"
     },
-    "finance": {
-      "cnbc": "url",
-      "fox": "url",
-      "msn": "url",
-      "npr": "url",
-      "yahoo": "url"
+    "tv-films": {
+      "et": "https://www.etonline.com/movies/rss",
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/celebrity/"
     },
-    "politics": {
-      "cbs": "url",
-      "cnn": "url",
-      "fox": "url",
-      "npr": "url",
-      "politico": "url"
+    "events": {}
+  },
+  "finance": {},
+  "politics": {},
+  "sports": {},
+  "technology": {},
+  "weather": {},
+  "world": {
+    "africa": {},
+    "asia": {
+      "indiatoday": "https://www.indiatoday.in/rss/1206577",
+      "ndtv": "https://feeds.feedburner.com/ndtvnews-world-news",
+      "thehindu": "https://www.thehindu.com/news/national/?service=rss"
     },
-    "sports": {
-      "cnn": "url",
-      "espn": "url",
-      "fox": "url",
-      "npr": "url",
-      "yahoo": "url"
+    "europe": {
+      "bbc": "http://feeds.bbci.co.uk/news/world/rss.xml"
     },
-    "technology": {
-      "abc": "url",
-      "cbs": "url",
-      "msn": "url",
-      "npr": "url",
-      "yahoo": "url"
-    },
-    "weather": {
-      "noshit": "url",
-      "noshitmf": "url",
-      "npr": "url",
-      "some-other-shit": "url",
-      "weatherchannel": "url"
-    },
-    "world": {
-      "bbc": "http://feeds.bbci.co.uk/news/world/rss.xml",
+    "north-america": {
       "cnbc": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
       "cnn": "http://rss.cnn.com/rss/edition_world.rss",
       "fox": "https://moxie.foxnews.com/google-publisher/world.xml",
       "npr": "https://feeds.npr.org/1004/rss.xml",
-      "nytimes": "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/section/world/rss.xml",
-      "un": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
-      "washingtonpost": "https://feeds.washingtonpost.com/rss/world",
-      "ndtv": "https://feeds.feedburner.com/ndtvnews-world-news",
-      "indiatoday": "https://www.indiatoday.in/rss/1206577",
-      "thehindu": "https://www.thehindu.com/news/national/?service=rss"
-    }
-  }
+      "nytimes": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+    },
+    "oceania": {},
+    "south-america": {}
+  },
+  "top-stories": {}
 }
