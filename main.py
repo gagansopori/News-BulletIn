@@ -1,10 +1,14 @@
 import asyncio
+
+from src.util.JsonParserUtil import JsonParser
 from src.util.NewsBulletinUtils import NewsBulletinUtils
 
 
 def main():
     news = NewsBulletinUtils()
-    news.parse_json()
+    # json_obj = JsonParser()
+    # json_obj.parse_json()
+    news.stage_source_urls()
 
 
 if __name__ == '__main__':
