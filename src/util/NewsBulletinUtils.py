@@ -1,11 +1,10 @@
-import os, json, asyncio
+import asyncio
 import feedparser
-from time import perf_counter, strftime, gmtime
+from time import perf_counter
 
 from src.util.JsonParserUtil import JsonParser
 
 
-# url_source = 'src/resources/source_urls.json'
 class NewsBulletinUtils:
     def __init__(self):
         self.loop = asyncio.get_event_loop()
@@ -14,8 +13,8 @@ class NewsBulletinUtils:
 
     def stage_source_urls(self, url_list=None):
         """
-        Driver Method that helps enrich & validate source urls, fetch RSS feeds from the provided json. If no JSON is
-        provided the app with consider the default json.
+        Driver Method that helps enrich & validate source urls, fetch RSS feeds from the provided urls. If no JSON is
+        provided the app will consider the default json.
         :param url_list:
         :return:
         """
@@ -31,7 +30,7 @@ class NewsBulletinUtils:
             self.gather_data(url_list)
             # self.feed_driver_sync(url_list)
             print(f'Time taken to fetch all news: {perf_counter() - begin}')
-            # print(self.results[0][0].entries[0].title)
+            print(self.news)
 
     def gather_data(self, url_list):
         return self.loop.run_until_complete(self.feed_driver(url_list))
@@ -47,9 +46,16 @@ class NewsBulletinUtils:
 
     def fetch_news_report(self, url):
         x = feedparser.parse(url)
+        y = dict()
         for i in x.entries:
             # print(f'{url}\n')
-            print(i.title)
+            try:
+                if i.description:
+                    self.news[i.title] = i.description
+                elif i.summary:
+                    self.news[i.title] = i.summary
+            except (KeyError, AttributeError):
+                print(f'Error URL - {url}')
         return x
 
     # def feed_driver_sync(self, url_list):

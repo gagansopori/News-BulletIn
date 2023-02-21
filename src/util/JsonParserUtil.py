@@ -6,7 +6,6 @@ from src.util import filepath
 
 class JsonParser:
     def __init__(self):
-        self.loop = asyncio.get_event_loop()
         self.source_urls = []
 
     def parse_json(self, df=None):
