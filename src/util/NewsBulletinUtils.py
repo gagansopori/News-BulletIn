@@ -62,6 +62,7 @@ class NewsBulletinUtils:
         return x
 
     def feed_driver_sync(self, url_list):
+        print(f'Entering Sync Method Now')
         start = perf_counter()
         for url in url_list:
             result = feedparser.parse(url)
