@@ -47,8 +47,8 @@ class NewsBulletinUtils:
         return await asyncio.to_thread(self.fetch_news_report, url)
 
     def fetch_news_report(self, url):
-        x = feedparser.parse(url)
         print(f'Executing url - {url}')
+        x = feedparser.parse(url)
         y = dict()
         for i in x.entries:
             # print(f'{url}\n')
@@ -65,6 +65,7 @@ class NewsBulletinUtils:
         print(f'Entering Sync Method Now')
         start = perf_counter()
         for url in url_list:
+            print(f'Executing url - {url}')
             result = feedparser.parse(url)
 
         stop = perf_counter()
