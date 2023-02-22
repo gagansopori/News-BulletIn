@@ -46,6 +46,7 @@ class NewsBulletinUtils:
 
     def fetch_news_report(self, url):
         x = feedparser.parse(url)
+        print(f'Executing url - {url}')
         y = dict()
         for i in x.entries:
             # print(f'{url}\n')
