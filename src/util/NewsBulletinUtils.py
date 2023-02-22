@@ -30,7 +30,7 @@ class NewsBulletinUtils:
             self.gather_data(url_list)
             # self.feed_driver_sync(url_list)
             print(f'Time taken to fetch all news: {perf_counter() - begin}')
-            print(self.news)
+            # print(self.news)
 
     def gather_data(self, url_list):
         return self.loop.run_until_complete(self.feed_driver(url_list))
