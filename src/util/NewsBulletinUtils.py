@@ -28,7 +28,7 @@ class NewsBulletinUtils:
             begin = perf_counter()
             url_list = sources.parse_json()
             self.gather_data(url_list)
-            self.feed_driver_sync(url_list)
+            # self.feed_driver_sync(url_list)
             print(f'Time taken to fetch all news: {perf_counter() - begin}')
             # print(self.news)
 
@@ -49,9 +49,7 @@ class NewsBulletinUtils:
     def fetch_news_report(self, url):
         print(f'Executing url - {url}')
         x = feedparser.parse(url)
-        y = dict()
         for i in x.entries:
-            # print(f'{url}\n')
             try:
                 if i.description:
                     self.news[i.title] = i.description
@@ -61,13 +59,13 @@ class NewsBulletinUtils:
                 print(f'Error URL - {url}')
         return x
 
-    def feed_driver_sync(self, url_list):
-        result =[]
-        print(f'Entering Sync Method Now')
-        start = perf_counter()
-        for url in url_list:
-            print(f'Executing url - {url}')
-            result.append(feedparser.parse(url))
-
-        stop = perf_counter()
-        print(f'Time Taken for Sync - {stop - start}')
+    # def feed_driver_sync(self, url_list):
+    #     result =[]
+    #     print(f'Entering Sync Method Now')
+    #     start = perf_counter()
+    #     for url in url_list:
+    #         print(f'Executing url - {url}')
+    #         result.append(feedparser.parse(url))
+    #
+    #     stop = perf_counter()
+    #     print(f'Time Taken for Sync - {stop - start}')
