@@ -58,7 +58,6 @@
     },
     "north-america": {
       "cnbc": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
-      "cnn": "http://rss.cnn.com/rss/edition_world.rss",
       "fox": "https://moxie.foxnews.com/google-publisher/world.xml",
       "npr": "https://feeds.npr.org/1004/rss.xml",
       "nytimes": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
