@@ -32,7 +32,6 @@
     "top-stories": {
       "elle": "https://www.elle.com/rss/all.xml ",
       "et": "https://www.etonline.com/news/rss",
-      "ftv": "url",
       "gq": "https://www.gq.com/feed/rss"
     },
     "tv-films": {
