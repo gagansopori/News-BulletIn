@@ -62,11 +62,12 @@ class NewsBulletinUtils:
         return x
 
     def feed_driver_sync(self, url_list):
+        result =[]
         print(f'Entering Sync Method Now')
         start = perf_counter()
         for url in url_list:
             print(f'Executing url - {url}')
-            result = feedparser.parse(url)
+            result.append(feedparser.parse(url))
 
         stop = perf_counter()
         print(f'Time Taken for Sync - {stop - start}')
