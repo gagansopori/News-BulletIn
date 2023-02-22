@@ -28,7 +28,7 @@ class NewsBulletinUtils:
             begin = perf_counter()
             url_list = sources.parse_json()
             self.gather_data(url_list)
-            # self.feed_driver_sync(url_list)
+            self.feed_driver_sync(url_list)
             print(f'Time taken to fetch all news: {perf_counter() - begin}')
             # print(self.news)
 
@@ -37,11 +37,13 @@ class NewsBulletinUtils:
 
     async def feed_driver(self, url_list):
         start = perf_counter()
+        print()
         self.results.append(await asyncio.gather(*[self.fetch_news(url) for url in url_list]))
         stop = perf_counter()
         print(f'Time Taken for Async - {stop - start}')
 
     async def fetch_news(self, url):
+        # print(f'Batch url - {url}')
         return await asyncio.to_thread(self.fetch_news_report, url)
 
     def fetch_news_report(self, url):
@@ -59,10 +61,10 @@ class NewsBulletinUtils:
                 print(f'Error URL - {url}')
         return x
 
-    # def feed_driver_sync(self, url_list):
-    #     start = perf_counter()
-    #     for url in url_list:
-    #         result = feedparser.parse(url)
-    #
-    #     stop = perf_counter()
-    #     print(f'Time Taken for Sync - {stop - start}')
+    def feed_driver_sync(self, url_list):
+        start = perf_counter()
+        for url in url_list:
+            result = feedparser.parse(url)
+
+        stop = perf_counter()
+        print(f'Time Taken for Sync - {stop - start}')
