@@ -2,6 +2,8 @@ import os
 
 src_path = os.path.join(os.getcwd(), 'src')
 print(f'src_path - {src_path}')
+print(os.listdir('src/resources'))
+print(os.path.abspath(__file__))
 resource_path = os.path.join(src_path, 'resources')
 print(f'resource_path - {resource_path}')
 filepath = os.path.join(resource_path, 'source_urls.json')
