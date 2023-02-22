@@ -17,7 +17,7 @@ class JsonParser:
                 df = json.load(source)
                 self.url_parser_sync(df)
                 print(f'Time taken to parse Json: {perf_counter() - begin}')
-        print(self.source_urls)
+        print(f'Source Size - {len(self.source_urls)}. \nURL List - {self.source_urls}')
         return self.source_urls
 
     def url_parser_sync(self, df):
