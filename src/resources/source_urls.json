@@ -32,6 +32,7 @@
     "top-stories": {
       "elle": "https://www.elle.com/rss/all.xml ",
       "et": "https://www.etonline.com/news/rss",
+      "ftv": "url",
       "gq": "https://www.gq.com/feed/rss"
     },
     "tv-films": {
@@ -57,6 +58,7 @@
     },
     "north-america": {
       "cnbc": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+      "cnn": "http://rss.cnn.com/rss/edition_world.rss",
       "fox": "https://moxie.foxnews.com/google-publisher/world.xml",
       "npr": "https://feeds.npr.org/1004/rss.xml",
       "nytimes": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
