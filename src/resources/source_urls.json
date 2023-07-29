@@ -1,0 +1,70 @@
+{
+  "entertainment": {
+    "adult": {
+      "avn": "https://avn.com/feed/articles/video.rss",
+      "xbiz": "https://www.xbiz.com/rss/news/all.xml"
+    },
+    "culture": {
+      "elle": "https://www.elle.com/rss/culture.xml",
+      "gq": "https://www.gq.com/feed/culture/rss",
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/culture/",
+      "vogue": "https://www.vogue.com/feed/culture/rss"
+    },
+    "fashion": {
+      "elle": "https://www.elle.com/rss/fashion.xml",
+      "et": "https://www.etonline.com/style/fashion/rss",
+      "gq": "https://www.gq.com/feed/style/rss",
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/fashion/",
+      "vogue": "https://www.vogue.com/feed/fashion/rss"
+    },
+    "health-beauty": {
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/beauty/",
+      "vogue": "https://www.vogue.com/feed/beauty/rss"
+    },
+    "lifestyle": {
+      "elle": "https://www.elle.com/rss/life-love.xml",
+      "et": "https://www.etonline.com/style/lifestyle/rss",
+      "vogue": "https://www.vogue.com/feed/living/rss"
+    },
+    "shopping": {
+      "gq": "https://www.gq.com/feed/gq-recommends/rss"
+    },
+    "top-stories": {
+      "elle": "https://www.elle.com/rss/all.xml ",
+      "et": "https://www.etonline.com/news/rss",
+      "ftv": "url",
+      "gq": "https://www.gq.com/feed/rss"
+    },
+    "tv-films": {
+      "et": "https://www.etonline.com/movies/rss",
+      "harper-bazaar": "https://www.harpersbazaar.com/rss/celebrity/"
+    },
+    "events": {}
+  },
+  "finance": {},
+  "politics": {},
+  "sports": {},
+  "technology": {},
+  "weather": {},
+  "world": {
+    "africa": {},
+    "asia": {
+      "indiatoday": "https://www.indiatoday.in/rss/1206577",
+      "ndtv": "https://feeds.feedburner.com/ndtvnews-world-news",
+      "thehindu": "https://www.thehindu.com/news/national/?service=rss"
+    },
+    "europe": {
+      "bbc": "http://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    "north-america": {
+      "cnbc": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+      "cnn": "http://rss.cnn.com/rss/edition_world.rss",
+      "fox": "https://moxie.foxnews.com/google-publisher/world.xml",
+      "npr": "https://feeds.npr.org/1004/rss.xml",
+      "nytimes": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+    },
+    "oceania": {},
+    "south-america": {}
+  },
+  "top-stories": {}
+}
